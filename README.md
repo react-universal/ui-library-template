@@ -1,4 +1,4 @@
-# @reactuniversal/library-template
+# @reactuniversal/ui-library-template
 
 A template for creating universal (web, ios, android, desktop) React Native libraries using Storybook, Lerna, React Native Web, and Typescript.
 
