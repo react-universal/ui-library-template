@@ -1,9 +1,13 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const Example = () => (
+export interface Props {
+  text: string;
+}
+
+const Example = ({text}: Props) => (
   <View>
-    <Text>Test</Text>
+    <Text>{text}</Text>
   </View>
 );
 

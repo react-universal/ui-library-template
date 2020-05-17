@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 
-import Example from './example';
+import Example from './Example';
 
 import {storiesOf} from '../../../storybook/helpers/storiesOf';
 
@@ -9,6 +9,6 @@ storiesOf('Example', module)
   .addParameters({jest: ['Button']})
   .add('Component', () => (
     <View>
-      <Example />
+      <Example text={'This is an example Component'} />
     </View>
   ));

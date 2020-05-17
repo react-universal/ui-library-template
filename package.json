@@ -13,13 +13,18 @@
     "build-storybook": "build-storybook -c .storybook -s ./public -o gh",
     "deploy-docs": "gh-pages -d gh",
     "see-npm-package": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-    "build": "./node_modules/.bin/babel src --out-dir dist --ignore \"**/*.test.js\""
+    "build": "./node_modules/.bin/babel src --out-dir dist --ignore \"**/*.test.js\"",
+    "build-lib-watch": "tsc -w"
   },
   "dependencies": {
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
     "react": "^16.11.0",
+    "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-native": "^0.62.2",
-    "react-native-web": "^0.12.2"
+    "react-native-web": "^0.12.2",
+    "ts-loader": "^7.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
