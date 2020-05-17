@@ -1,5 +1,6 @@
 # @reactuniversal/ui-library-template
 
+
 A template for creating universal (web, ios, android, desktop) React Native libraries using Storybook, Lerna, React Native Web, and Typescript.
 
 ### Independently Versioned Packages
@@ -23,6 +24,12 @@ https://react-universal.github.io/[package]
 ```
 
 For example, the template ui library storybook is published here: https://react-universal.github.io/ui-library-template/
+
+### Badges
+
+Sample badges to use:
+
+![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/)
 
 ## Structure
 
