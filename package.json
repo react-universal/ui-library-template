@@ -7,24 +7,23 @@
     "web": "start-storybook -p 9009 -s public",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint 'packages/**/*.{ts,tsx}'",
     "storybook": "storybook start -p 7007",
     "storybook-web": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -c .storybook -s ./public -o gh",
-    "deploy-docs": "gh-pages -d gh",
+    "push-docs": "gh-pages -d gh",
+    "deploy-docs": "npm run build-storybook && npm run push-docs",
     "see-npm-package": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "build": "./node_modules/.bin/babel src --out-dir dist --ignore \"**/*.test.js\"",
-    "build-lib-watch": "tsc -w"
+    "build-lib-watch": "tsc -w",
+    "copy-svg-to-lib": "cpx \"./packages/**/*.svg\" ./dist",
+    "copy-png-to-lib": "cpx \"./packages/**/*.png\" ./dist"
   },
   "dependencies": {
-    "@storybook/addon-info": "^5.3.18",
-    "@storybook/preset-typescript": "^3.0.0",
     "react": "^16.11.0",
-    "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-native": "^0.62.2",
-    "react-native-web": "^0.12.2",
-    "ts-loader": "^7.0.4"
+    "react-native-web": "^0.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -35,6 +34,8 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-react-native-web": "^0.12.2",
     "@storybook/react": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
     "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
@@ -49,7 +50,9 @@
     "lerna": "^3.21.0",
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.11.0",
-    "typescript": "^3.9.2"
+    "react-docgen-typescript-loader": "^3.7.2",
+    "typescript": "^3.9.2",
+    "ts-loader": "^7.0.4"
   },
   "jest": {
     "preset": "react-native"
