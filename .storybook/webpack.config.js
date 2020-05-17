@@ -1,6 +1,3 @@
-const path = require('path');
-const webpack = require('webpack');
-
 module.exports = async ({config, mode}) => {
   config.module.rules.push(
     {
