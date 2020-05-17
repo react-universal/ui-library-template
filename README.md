@@ -9,7 +9,7 @@ Each package is independently versioned and avaialble using Lerna.
 
 ### Public Storybooks with Github Pages
 
-Each library can publish it's storybook docs using the commands
+Each library can publish its storybook docs using the commands
 
 ```
 npm run build-storybook
@@ -21,6 +21,8 @@ This will bundle the storybook web project, create a separate branch `gh`, push 
 ```
 https://react-universal.github.io/[package]
 ```
+
+For example, the template ui library storybook is published here: https://react-universal.github.io/ui-library-template/
 
 ## Structure
 
