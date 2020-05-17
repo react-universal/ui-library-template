@@ -7,7 +7,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "storybook": "storybook start -p 7007",
+    "storybook-web": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -c .storybook -s ./public -o gh",
+    "deploy-docs": "gh-pages -d gh",
+    "see-npm-package": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
+    "build": "./node_modules/.bin/babel src --out-dir dist --ignore \"**/*.test.js\""
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
