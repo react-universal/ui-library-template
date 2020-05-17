@@ -1,7 +1,6 @@
 {
-  "name": "LibTemplate",
+  "name": "@reactuniversal/library-template",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -42,5 +41,25 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "react",
+    "react universal",
+    "react native"
+  ],
+  "description": "React Universal Template Project",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-universal/library-template"
+  },
+  "author": "Cody Pearce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-universal/library-template/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
