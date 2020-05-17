@@ -4,6 +4,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "web": "start-storybook -p 9009 -s public",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
@@ -15,35 +16,35 @@
     "build": "./node_modules/.bin/babel src --out-dir dist --ignore \"**/*.test.js\""
   },
   "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.13.1",
+    "react-native": "^0.62.2",
+    "react-native-web": "^0.12.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
     "@babel/cli": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-react-native-web": "^0.12.2",
     "@storybook/react": "^5.3.18",
     "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@types/react-native": "^0.62.10",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-react-native-web": "^0.12.2",
-    "gh-pages": "^2.2.0",
-    "lerna": "^3.21.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.13.1",
-    "react-native": "^0.62.2",
-    "react-native-web": "^0.12.2",
-    "typescript": "^3.9.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
     "@storybook/react-native": "^5.3.18",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
+    "gh-pages": "^2.2.0",
+    "lerna": "^3.21.0",
     "metro-react-native-babel-preset": "^0.58.0",
-    "react-test-renderer": "16.11.0"
+    "react-test-renderer": "16.11.0",
+    "typescript": "^3.9.2"
   },
   "jest": {
     "preset": "react-native"
