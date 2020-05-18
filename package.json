@@ -20,6 +20,7 @@
     "copy-png-to-lib": "cpx \"./packages/**/*.png\" ./dist"
   },
   "dependencies": {
+    "@types/react-test-renderer": "^16.9.2",
     "react": "^16.11.0",
     "react-dom": "^16.13.1",
     "react-native": "^0.62.2",
