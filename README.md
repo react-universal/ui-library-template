@@ -62,12 +62,17 @@ Example.test.tsx
 Example.tsx
 ```
 
+When I want to create a new component I usually use the `lerna create <name>` commmand, but this is not necessary, you can just create a new folder, `package.json`, and the required component files.
 
 ### Independently Versioned Packages
 
 The config for lerna is found in the `lerna.json` file at the project root. Currently, `version` is set to `independent`, which means that each package/component you add will be versioned independently of each other. If you want all packages to share the same version then change `version` to the semantic version you want, for example, `version: 1.1.3`. Check out the Lerna [documentation](https://github.com/lerna/lerna#readme) to learn more about configuring Lerna.
 
-### Public Storybooks with Github Pages
+### Publishing Your Components
+
+Lerna makes this incredibly easy, just run `lerna publish` and all packages with updates will be published. Lerna provides a lot of options here however, checkout the [docs on publishing](https://github.com/lerna/lerna/tree/master/commands/publish#readme) to learn more.
+
+### Publishing Your Storybook with Github Pages
 
 You can publish the storybook web environment using the following command:
 
