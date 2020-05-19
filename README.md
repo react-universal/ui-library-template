@@ -48,6 +48,21 @@ Optional
 
 ## Docs
 
+### Developing components
+
+Each component should have it's own folder under the `packages` folder, with it's own `package.json`. This allows you to publish and make available each component seperately. Though you can structure the packages and components however you want, but you'll  need to update the `lerna` configuration depending on your structure.
+
+An example component is provided in `packages/example`. The storybook config looks for stories that have this extension: `.stories.tsx`. The tests look for stories with `.test.tsx` extension. Where you put these files doesn't really matter, but I find putting them right next to the component makes it easier.
+
+```
+// packages/example/lib
+
+Example.stories.tsx
+Example.test.tsx
+Example.tsx
+```
+
+
 ### Independently Versioned Packages
 
 The config for lerna is found in the `lerna.json` file at the project root. Currently, `version` is set to `independent`, which means that each package/component you add will be versioned independently of each other. If you want all packages to share the same version then change `version` to the semantic version you want, for example, `version: 1.1.3`. Check out the Lerna [documentation](https://github.com/lerna/lerna#readme) to learn more about configuring Lerna.
