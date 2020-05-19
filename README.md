@@ -1,6 +1,29 @@
 # @reactuniversal/ui-library-template
 
-A template for creating universal (web, ios, android, desktop) React Native libraries using Storybook, Lerna, React Native Web, and Typescript.
+A template for developing universal (web, ios, android, desktop) React Native UI components.
+
+
+* Develop cross-platform components for iOS, Android, Web, Windows, Macos, and Electron with React Native
+* Cross-platform storybook environment with useful addons
+* Publish storybook environment to Github pages with a single command
+* Publish and version each component independently using a single command with Lerna
+* Typescript Support
+* Accessibility checks with ay11 addon
+* Unit testing with Jest and React test renderer
+
+## Get Started
+
+1. Click "Use this Template" and create a new repo
+2. Run `npm i` to install the dependencies
+3. Start the storybook web environment: `npm run web`
+4. Start a native storybook environment: `npm run ios` or `npm run android`
+
+Optional
+
+5. Update fields in Package.json to match your project (name, author, version, etc)
+6. Update `storybook/stories/Home.stories.tsx` text to match the name of your project
+7. Start creating components
+
 
 ## Tech
 
