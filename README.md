@@ -17,12 +17,14 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 2. Run `npm i` to install the dependencies
 3. Start the storybook web environment: `npm run web`
 4. Start a native storybook environment: `npm run ios` or `npm run android`
+5. Start creating components
 
 Optional
 
-5. Update fields in Package.json to match your project (name, author, version, etc)
-6. Update `storybook/stories/Home.stories.tsx` text to match the name of your project
-7. Start creating components
+6. Update fields in Package.json to match your project (name, author, version, etc)
+7. Update `storybook/stories/Home.stories.tsx` text to match the name of your project
+8. Update Readme for your project 
+
 
 
 ## Tech
@@ -44,13 +46,15 @@ Optional
 | a11y Addon          | Displays accessbility tests for each component              | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
 | gh-pages            | Tool for easily publishing to Github Pages                  | [Githb](https://github.com/tschaub/gh-pages)                                      |
 
+## Docs
+
 ### Independently Versioned Packages
 
-Each package is independently versioned and avaialble using Lerna.
+The config for lerna is found in the `lerna.json` file at the project root. Currently, `version` is set to `independent`, which means that each package/component you add will be versioned independently of each other. If you want all packages to share the same version then change `version` to the semantic version you want, for example, `version: 1.1.3`. Check out the Lerna [documentation](https://github.com/lerna/lerna#readme) to learn more about configuring Lerna.
 
 ### Public Storybooks with Github Pages
 
-Each library can publish its storybook docs using the following command:
+You can publish the storybook web environment using the following command:
 
 ```
 npm run run deploy-docs
@@ -64,17 +68,18 @@ https://react-universal.github.io/[package]
 
 For example, the template ui library storybook is published here: https://react-universal.github.io/ui-library-template/
 
-### Badges
-
-Sample badges to use:
-
-![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)
 
 ### Stroybook style helper components
 
 By default storybook adds the components directly in the top left without any styles. However, usually it looks better (though not always) to add some more spacing and title. Two helper components are provided for this: `Container` and `Header`.
 
-The second problem with default storybook styling is that the storybook environment (where the components actually are) is not wrapped in a `ScrollView`, the `Container` component therefore, also wraps the environment and allows you to scroll down on iOS and Android if your components grow larger than the screen.
+Another problem with default storybook styling is that the storybook environment (where the components actually are) is not wrapped in a `ScrollView`, which in React Native means the screen will not scroll if the content extends past the bottom. The `Container` component, therefore, also wraps the environment and allows you to scroll down on iOS and Android if your components grow larger than the screen.
+
+### Badges
+
+Some badges that might be useful to disply in the library's Readme.
+
+![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)
 
 ## Structure
 
