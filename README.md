@@ -135,13 +135,17 @@ Runs storybook on iOS
 
 `npm run web`
 
-Runs storybook on the web, also opens a tab one `localhost:9000`.
+Runs storybook on the web, also opens a tab at `localhost:9000`.
+
+`npm run deploy-docs`
+
+Builds and deploys storybook docs
 
 `npm run build-storybook`
 
 Builds the storybook web project into a bundle in the `public` folder.
 
-`npm run deploy-docs`
+`npm run push-docs`
 
 Deploys the contents of the public folder, which should be the storybook web project.
 
@@ -156,6 +160,11 @@ Runs Jest tests
 `npm run lint`
 
 Runs eslint
+
+`npm run test:generate-output`
+
+Generates `jest-test-results.json` which is used by the jest addon in Storybook to show the latest test results for that component.
+
 
 ## React Universal
 
