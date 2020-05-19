@@ -98,10 +98,6 @@ Each seperated package has it's own `package.json`, `lib` folder, and `__tests__
 
 Lib folder for each package contains the src files for that package as well as the `.stories.` files.
 
-**packages/[Component]/**tests\_\_
-
-The `__tests__` folder contains the component tests.
-
 ## Commands
 
 `npm run android`
@@ -124,9 +120,9 @@ Builds the storybook web project into a bundle in the `public` folder.
 
 Deploys the contents of the public folder, which should be the storybook web project.
 
-``npm run see-npm-package`
+`npm run see-npm-package`
 
-This command shows the exact files that will be published if you run the command `npm publish`. Useful for double checking if you are including something you do not want to include. If something does need to be added, you can ignore it in the `.npmignore` file.
+This command shows the exact files that will be published if you run the command `npm publish`. Useful for double checking if you are including something you do not want to include. If something does need to be ignored, you can ignore it in the `.npmignore` file.
 
 `npm run test`
 
