@@ -117,11 +117,11 @@ Folder contains all of the individual package folders (Button, Utils, etc.
 
 **packages/[Component]**
 
-Each seperated package has it's own `package.json`, `lib` folder, and `__tests__`.
+Each seperated package has it's own `package.json`, and the `lib` folder.
 
 **packages/[Component]/lib**
 
-Lib folder for each package contains the src files for that package as well as the `.stories.` files.
+Lib folder for each package contains the src files for that package as well as the `.stories.` and `.test.` files.
 
 ## Commands
 
