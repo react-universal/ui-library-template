@@ -14,7 +14,7 @@ addDecorator(
   }),
 );
 
-const req = require.context('../packages', true, /\.stories.tsx$/);
+const req = require.context('..', true, /\.stories.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

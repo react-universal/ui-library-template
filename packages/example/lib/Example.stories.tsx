@@ -5,7 +5,7 @@ import Example from './Example';
 
 import {storiesOf} from '../../../storybook/helpers/storiesOf';
 
-storiesOf('Components', module)
+storiesOf('Components | Component', module)
   .addParameters({jest: ['Example']})
   .add('Example', () => (
     <View>
