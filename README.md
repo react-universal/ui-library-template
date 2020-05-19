@@ -2,6 +2,23 @@
 
 A template for creating universal (web, ios, android, desktop) React Native libraries using Storybook, Lerna, React Native Web, and Typescript.
 
+| Tech                | Used for                                                    | Learn more                                                                        |
+| ------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| React               | UI library for building the components                      | [Docs](https://reactjs.org/)                                                      |
+| React Native        | Components and tools for rendering React on iOS and Android | [Docs](https://reactnative.dev/)                                                  |
+| React Native Web    | Render React native components on the web                   | [Github](https://github.com/necolas/react-native-web)                             |
+| Lerna               | Allows Monorepo for independently versioned components      | [Github](https://lerna.js.org/)                                                   |
+| Typescript          | Typechecking for Javascript                                 | [Docs](https://www.typescriptlang.org/)                                           |
+| Eslint              | Linter                                                      | [Docs](https://eslint.org/)                                                       |
+| Jest                | Test framework                                              | [Docs](https://jestjs.io/en/)                                                     |
+| React Test Renderer | Renders React components to pure js objects                 | [Docs](https://reactjs.org/docs/test-renderer.html)                               |
+| Storybook           | Component Development Environment and documentation         | [Docs](https://storybook.js.org/)                                                 |
+| Jest Addon          | Displays Jest test results for each component in Storybook  | [Github](https://github.com/storybookjs/storybook/tree/master/addons/jest)        |
+| Viewport Addon      | Displays components in different device sizes               | [Github](https://github.com/storybookjs/storybook/tree/master/addons/viewport)    |
+| Storysource Addon   | Displays the code for the component story                   | [Github](https://github.com/storybookjs/storybook/tree/master/addons/storysource) |
+| a11y Addon          | Displays accessbility tests for each component              | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
+| gh-pages            | Tool for easily publishing to Github Pages                  | [Githb](https://github.com/tschaub/gh-pages)                                      |
+
 ### Independently Versioned Packages
 
 Each package is independently versioned and avaialble using Lerna.

@@ -5,9 +5,9 @@ import Example from './Example';
 
 import {storiesOf} from '../../../storybook/helpers/storiesOf';
 
-storiesOf('Example', module)
-  .addParameters({jest: ['Button']})
-  .add('Component', () => (
+storiesOf('Components', module)
+  .addParameters({jest: ['Example']})
+  .add('Example', () => (
     <View>
       <Example text={'This is an example Component'} />
     </View>
