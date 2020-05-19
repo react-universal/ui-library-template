@@ -2,6 +2,8 @@
 
 A template for creating universal (web, ios, android, desktop) React Native libraries using Storybook, Lerna, React Native Web, and Typescript.
 
+## Tech
+
 | Tech                | Used for                                                    | Learn more                                                                        |
 | ------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | React               | UI library for building the components                      | [Docs](https://reactjs.org/)                                                      |
@@ -44,6 +46,12 @@ For example, the template ui library storybook is published here: https://react-
 Sample badges to use:
 
 ![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)
+
+### Stroybook style helper components
+
+By default storybook adds the components directly in the top left without any styles. However, usually it looks better (though not always) to add some more spacing and title. Two helper components are provided for this: `Container` and `Header`.
+
+The second problem with default storybook styling is that the storybook environment (where the components actually are) is not wrapped in a `ScrollView`, the `Container` component therefore, also wraps the environment and allows you to scroll down on iOS and Android if your components grow larger than the screen.
 
 ## Structure
 
