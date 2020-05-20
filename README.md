@@ -10,7 +10,8 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 * Typescript Support
 * Accessibility checks with ay11 addon
 * Unit testing with Jest and React test renderer
-* Visual Regression Tests With Loki
+* Visual Regression Tests with Loki
+* Continuous Integration with Circle Ci
 
 ## Get Started
 
@@ -29,7 +30,6 @@ Optional
 
 
 ## Tech
-
 | Tech                | Used for                                                     | Learn more                                                                        |
 |---------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | React               | UI library for building the components                       | [Docs](https://reactjs.org/)                                                      |
@@ -47,7 +47,7 @@ Optional
 | Storysource Addon   | Displays the code for the component story                    | [Github](https://github.com/storybookjs/storybook/tree/master/addons/storysource) |
 | a11y Addon          | Displays accessbility tests for each component               | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
 | gh-pages            | Tool for easily publishing to Github Pages                   | [Githb](https://github.com/tschaub/gh-pages)                                      |
-
+| Circle CI           | Continuous Integration                                       | [Docs](https://circleci.com/)                                                     |
 ## Docs
 
 ### Developing components
