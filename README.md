@@ -1,5 +1,7 @@
 # @reactuniversal/ui-library-template
 
+[![React Universal UI LIbrary Template](https://circleci.com/gh/react-universal/ui-library-template.svg?style=svg)](https://app.circleci.com/pipelines/github/react-universal/ui-library-template)
+
 A template for developing universal (web, ios, android, desktop) React Native UI components.
 
 
@@ -107,7 +109,7 @@ Another problem with default storybook styling is that the storybook environment
 
 Some badges that might be useful to disply in the library's Readme.
 
-![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)
+![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/v/release/react-universal/ui-library-template) ![](https://img.shields.io/npm/v/react-universal/ui-template-library) ![](https://img.shields.io/travis/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue) [![React Universal UI LIbrary Template](https://circleci.com/gh/react-universal/ui-library-template.svg?style=svg)](https://app.circleci.com/pipelines/github/react-universal/ui-library-template)
 
 ## Structure
 
