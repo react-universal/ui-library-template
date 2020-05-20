@@ -18,12 +18,15 @@
     "build-lib-watch": "tsc -w",
     "copy-svg-to-lib": "cpx \"./packages/**/*.svg\" ./dist",
     "copy-png-to-lib": "cpx \"./packages/**/*.png\" ./dist",
-    "test:generate-output": "jest --json --outputFile=.jest-test-results.json"
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
+    "test:loki": "loki",
+    "test:loki-update": "loki update --port 9009"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-storysource": "^5.3.18",
     "@types/react-test-renderer": "^16.9.2",
+    "loki": "^0.20.3",
     "react": "^16.11.0",
     "react-dom": "^16.13.1",
     "react-native": "^0.62.2",
@@ -82,5 +85,25 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "loki": {
+    "chromeSelector": ".wrapper > *, #root > *",
+    "diffingEngine": "looks-same",
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      },
+      "chrome.a4": {
+        "target": "chrome.docker",
+        "preset": "A4 Paper"
+      }
+    },
+    "fetchFailIgnore": "localhost:1234/get"
   }
 }
