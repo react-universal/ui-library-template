@@ -19,7 +19,7 @@
     "copy-svg-to-lib": "cpx \"./packages/**/*.svg\" ./dist",
     "copy-png-to-lib": "cpx \"./packages/**/*.png\" ./dist",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
-    "test:loki": "loki",
+    "test:loki": "loki --port 9009",
     "test:loki-update": "loki update --port 9009"
   },
   "dependencies": {
