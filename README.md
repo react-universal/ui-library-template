@@ -10,6 +10,7 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 * Typescript Support
 * Accessibility checks with ay11 addon
 * Unit testing with Jest and React test renderer
+* Visual Regression Tests With Loki
 
 ## Get Started
 
@@ -29,22 +30,23 @@ Optional
 
 ## Tech
 
-| Tech                | Used for                                                    | Learn more                                                                        |
-| ------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| React               | UI library for building the components                      | [Docs](https://reactjs.org/)                                                      |
-| React Native        | Components and tools for rendering React on iOS and Android | [Docs](https://reactnative.dev/)                                                  |
-| React Native Web    | Render React native components on the web                   | [Github](https://github.com/necolas/react-native-web)                             |
-| Lerna               | Allows Monorepo for independently versioned components      | [Github](https://lerna.js.org/)                                                   |
-| Typescript          | Typechecking for Javascript                                 | [Docs](https://www.typescriptlang.org/)                                           |
-| Eslint              | Linter                                                      | [Docs](https://eslint.org/)                                                       |
-| Jest                | Test framework                                              | [Docs](https://jestjs.io/en/)                                                     |
-| React Test Renderer | Renders React components to pure js objects                 | [Docs](https://reactjs.org/docs/test-renderer.html)                               |
-| Storybook           | Component Development Environment and documentation         | [Docs](https://storybook.js.org/)                                                 |
-| Jest Addon          | Displays Jest test results for each component in Storybook  | [Github](https://github.com/storybookjs/storybook/tree/master/addons/jest)        |
-| Viewport Addon      | Displays components in different device sizes               | [Github](https://github.com/storybookjs/storybook/tree/master/addons/viewport)    |
-| Storysource Addon   | Displays the code for the component story                   | [Github](https://github.com/storybookjs/storybook/tree/master/addons/storysource) |
-| a11y Addon          | Displays accessbility tests for each component              | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
-| gh-pages            | Tool for easily publishing to Github Pages                  | [Githb](https://github.com/tschaub/gh-pages)                                      |
+| Tech                | Used for                                                     | Learn more                                                                        |
+|---------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| React               | UI library for building the components                       | [Docs](https://reactjs.org/)                                                      |
+| React Native        | Components and tools for rendering React on iOS and Android  | [Docs](https://reactnative.dev/)                                                  |
+| React Native Web    | Render React native components on the web                    | [Github](https://github.com/necolas/react-native-web)                             |
+| Lerna               | Allows Monorepo for independently versioned components       | [Github](https://lerna.js.org/)                                                   |
+| Typescript          | Typechecking for Javascript                                  | [Docs](https://www.typescriptlang.org/)                                           |
+| Eslint              | Linter                                                       | [Docs](https://eslint.org/)                                                       |
+| Jest                | Test framework                                               | [Docs](https://jestjs.io/en/)                                                     |
+| React Test Renderer | Renders React components to pure js objects                  | [Docs](https://reactjs.org/docs/test-renderer.html)                               |
+| Loki                | Visual Regression Tests for React and React Native           | [Docs](https://loki.js.org/)                                                      |
+| Storybook           | Component Development Environment and documentation          | [Docs](https://storybook.js.org/)                                                 |
+| Jest Addon          | Displays Jest test results for each component in Storybook   | [Github](https://github.com/storybookjs/storybook/tree/master/addons/jest)        |
+| Viewport Addon      | Displays components in different device sizes                | [Github](https://github.com/storybookjs/storybook/tree/master/addons/viewport)    |
+| Storysource Addon   | Displays the code for the component story                    | [Github](https://github.com/storybookjs/storybook/tree/master/addons/storysource) |
+| a11y Addon          | Displays accessbility tests for each component               | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
+| gh-pages            | Tool for easily publishing to Github Pages                   | [Githb](https://github.com/tschaub/gh-pages)                                      |
 
 ## Docs
 
@@ -64,9 +66,6 @@ Example.tsx
 
 When I want to create a new component I usually use the `lerna create <name>` commmand, but this is not necessary, you can just create a new folder, `package.json`, and the required component files.
 
-### Independently Versioned Packages
-
-The config for lerna is found in the `lerna.json` file at the project root. Currently, `version` is set to `independent`, which means that each package/component you add will be versioned independently of each other. If you want all packages to share the same version then change `version` to the semantic version you want, for example, `version: 1.1.3`. Check out the Lerna [documentation](https://github.com/lerna/lerna#readme) to learn more about configuring Lerna.
 
 ### Publishing Your Components
 
@@ -88,6 +87,15 @@ https://react-universal.github.io/[package]
 
 For example, the template ui library storybook is published here: https://react-universal.github.io/ui-library-template/
 
+### Independently Versioned Packages
+
+The config for lerna is found in the `lerna.json` file at the project root. Currently, `version` is set to `independent`, which means that each package/component you add will be versioned independently of each other. If you want all packages to share the same version then change `version` to the semantic version you want, for example, `version: 1.1.3`. Check out the Lerna [documentation](https://github.com/lerna/lerna#readme) to learn more about configuring Lerna.
+
+### Visual Regression Tests
+
+For visual regression tests, we need to generate a starting reference image for how the component should look. We can do this initially by running the `test:loki-update` command, which will automatically create images for each story on chrome for three different sizes: `1366`, `iPhone7`, and `A4 paper`. You can customize Loki settings in the `package.json`. 
+
+Once you have reference images, you can run the command `test:loki` to run visual regression tests. If differences are found, the current image will placed in `.loki/current` and the difference image in `.loki/difference`.
 
 ### Stroybook style helper components
 
@@ -157,14 +165,23 @@ This command shows the exact files that will be published if you run the command
 
 Runs Jest tests
 
-`npm run lint`
 
-Runs eslint
 
 `npm run test:generate-output`
 
 Generates `jest-test-results.json` which is used by the jest addon in Storybook to show the latest test results for that component.
 
+`npm run test:loki`
+
+Runs loki tests
+
+`npm run test:loki-update`
+
+Generates the initial reference images that will be diffed later on.
+
+`npm run lint`
+
+Runs eslint
 
 ## React Universal
 
