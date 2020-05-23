@@ -1,6 +1,6 @@
 # @reactuniversal/ui-library-template
 
-[![React Universal UI LIbrary Template](https://circleci.com/gh/react-universal/ui-library-template.svg?style=svg)](https://app.circleci.com/pipelines/github/react-universal/ui-library-template) ![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)   [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) 
+[![React Universal UI LIbrary Template](https://circleci.com/gh/react-universal/ui-library-template.svg?style=svg)](https://app.circleci.com/pipelines/github/react-universal/ui-library-template) [![Maintainability](https://api.codeclimate.com/v1/badges/269e3c2fe1d01b7852eb/maintainability)](https://codeclimate.com/github/react-universal/ui-library-template/maintainability) ![](https://img.shields.io/github/lerna-json/v/react-universal/ui-library-template) ![](https://img.shields.io/github/license/react-universal/ui-library-template) ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) ![](https://img.shields.io/badge/platforms-ios%20%7C%20android%20%7C%20web%20%7C%20macos%20%7C%20windows%20%7C%20electron-blue)   [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://react-universal.github.io/ui-library-template/) 
 
 A template for developing universal (web, ios, android, desktop) React Native UI components.
 
@@ -14,6 +14,7 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 * Unit testing with Jest and React test renderer
 * Visual Regression Tests with Loki
 * Continuous Integration with Circle CI
+* Maintainability scores with CodeClimate
 * Eslint and Prettier Config
 * Git hooks with Husky
 
