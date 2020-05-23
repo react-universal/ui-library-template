@@ -11,12 +11,7 @@ jobs:
           steps:
             - run: npm install
             - run: npm run lint
-            - run:
-              name: 'Run Jest and Collect Coverage Reports'
-              command: npm run test -- --collectCoverage=true
-            - store_artifacts:
-              path: coverage
-
+            - run: npm test --coverage
 workflows:
   build-and-test:
     jobs:

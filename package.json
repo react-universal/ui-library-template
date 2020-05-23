@@ -20,7 +20,8 @@
     "copy-png-to-lib": "cpx \"./packages/**/*.png\" ./dist",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
     "test:loki": "loki --port 9009",
-    "test:loki-update": "loki update --port 9009"
+    "test:loki-update": "loki update --port 9009",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^5.3.18",
@@ -67,7 +68,11 @@
     "typescript": "^3.9.2"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "collectCoverage": true,
+    "testMatch": [
+      "<rootDir>/packages/**/**.test.tsx"
+    ]
   },
   "main": "dist/index.js",
   "keywords": [

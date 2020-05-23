@@ -1,0 +1,39 @@
+{
+  "version": "2",
+  "checks": {
+    "method-complexity": {
+      "config": {
+        "threshold": 6
+      }
+    },
+    "file-lines": {
+      "config": {
+        "threshold": 500
+      }
+    },
+    "method-lines": {
+      "config": {
+        "threshold": 100
+      }
+    },
+    "similar-code": {
+      "enabled": false
+    },
+    "identical-code": {
+      "config": {
+        "threshold": 100
+      }
+    }
+  },
+  "exclude_patterns": [
+    "**/__tests__/",
+    "**/__mocks__/",
+    "**/__snapshots__/",
+    ".stories.",
+    "storybook",
+    ".storybook",
+    ".loki",
+    "android",
+    "ios"
+  ]
+}
