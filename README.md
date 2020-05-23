@@ -13,7 +13,9 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 * Accessibility checks with ay11 addon
 * Unit testing with Jest and React test renderer
 * Visual Regression Tests with Loki
-* Continuous Integration with Circle Ci
+* Continuous Integration with Circle CI
+* Eslint and Prettier Config
+* Git hooks with Husky
 
 ## Get Started
 
@@ -40,6 +42,7 @@ Optional
 | Lerna               | Allows Monorepo for independently versioned components       | [Github](https://lerna.js.org/)                                                   |
 | Typescript          | Typechecking for Javascript                                  | [Docs](https://www.typescriptlang.org/)                                           |
 | Eslint              | Linter                                                       | [Docs](https://eslint.org/)                                                       |
+| Prettier            | Code formatter                                               | [Docs](https://prettier.io/)                                                      |
 | Jest                | Test framework                                               | [Docs](https://jestjs.io/en/)                                                     |
 | React Test Renderer | Renders React components to pure js objects                  | [Docs](https://reactjs.org/docs/test-renderer.html)                               |
 | Loki                | Visual Regression Tests for React and React Native           | [Docs](https://loki.js.org/)                                                      |
@@ -50,6 +53,7 @@ Optional
 | a11y Addon          | Displays accessbility tests for each component               | [Github](https://github.com/storybookjs/storybook/tree/master/addons/a11y)        |
 | gh-pages            | Tool for easily publishing to Github Pages                   | [Githb](https://github.com/tschaub/gh-pages)                                      |
 | Circle CI           | Continuous Integration                                       | [Docs](https://circleci.com/)                                                     |
+| Husky               | Git hooks for committing and pushing                         | [Github](https://github.com/typicode/husky)                                       |
 ## Docs
 
 ### Developing components
