@@ -57,6 +57,7 @@
     "babel-plugin-react-native-web": "^0.12.2",
     "eslint": "^6.5.1",
     "gh-pages": "^2.2.0",
+    "husky": "^4.2.5",
     "jest": "^24.9.0",
     "lerna": "^3.21.0",
     "metro-react-native-babel-preset": "^0.58.0",
@@ -107,5 +108,11 @@
       }
     },
     "fetchFailIgnore": "localhost:1234/get"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
   }
 }
