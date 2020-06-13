@@ -18,6 +18,8 @@ A template for developing universal (web, ios, android, desktop) React Native UI
 * Eslint and Prettier Config
 * Git hooks with Husky
 
+### [Documentation](https://reactuniversal.com/ui-library-template)
+
 ## Get Started
 
 1. Click "Use this Template" and create a new repo
