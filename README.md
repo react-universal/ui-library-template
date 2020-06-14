@@ -198,6 +198,11 @@ Runs eslint
 
 All React Universal UI components use this template. For example:
 
-* [Button](https://github.com/react-universal/Button)
+Libraries
 
+* [Space](https://github.com/react-universal/space)
+
+Components
+
+* [Button](https://github.com/react-universal/Button)
 
